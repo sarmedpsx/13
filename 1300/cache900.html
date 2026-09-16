@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html manifest="900.manifest">
+<head>
+<title></title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="يتم الان تنصيب الكاش: " + Percent + "%";}
+function DisplayCacheProgress(){window.msgs.innerHTML="تم تنصيب الكاش بنجاح  ✔";setTimeout(function(){window.msgs.innerHTML="اغلق المتصفح وافتحه ثانيا ...";},1500);}
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.applicationCache.onerror=function(e){window.msgs.innerHTML="خطا في تنصيب الكاش! - اغلق المتصفح وافتحه مره اخرى ...";};
+</script>
+<h1></h1>
+<hr>
+<br>
+<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">البدء بتنصيب الكاش...</h1>
+<h1 style="margin-top: 43px;"><a href="" style="color: #f31414;margin-left: 10px;margin-right: 10px;"></a><a href="" style="color: #f31414;margin-left: 10px;margin-right: 10px;"></h1>
+</body>
+</html>
